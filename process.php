@@ -1,32 +1,59 @@
 <?php
+session_start();    
 include("config.php");
 
-if(isset($_POST['registerButton'])){
+//For Updating A Task
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $fullname = $_POST['fullname'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
+if(isset($_POST["update"])){
 
-    if (strpos($email, "@ustp.edu.ph") === false) {
-        echo "Invalid email! Please use the USTP email.";
+    $id = $_POST['id'];
+    $new_title = $_POST['new_title'];
+    $new_description = $_POST['new_description'];
+    $new_priority = $_POST['new_priority'];
+    $new_due = $_POST['new_due'];
 
-        // header("Location: index.php");
-        // exit();
-    } else {
-        $register_query = "INSERT INTO `users`(`fullName`, `userName`, `password`, `contact`, `email`) VALUES ('$fullname', '$username', '$password', '$contact', '$email')";
-    
-        $register_query_run = mysqli_query($conn, $register_query);
-    
-        if($register_query_run){
-            echo "Registered Successfully";
-        } else {
-            echo "Error!";
-        }
+    if($new_title == ''){
+        $_SESSION['status'] = "Title cannot be empty";
+        $_SESSION['status_code'] = "error";
+        header("Location: edit_task.php");
+        exit();
+    }
+
+    if($new_due == ''){
+        $_SESSION['status'] = "Due date cannot be empty";
+        $_SESSION['status_code'] = "error";
+        header("Location: edit_task.php");
+        exit();
+    }
+
+    $query = "UPDATE `tasks` SET `title`='$new_title',`description`='$new_description',`priority`='$new_priority',`due_date`='$new_due' WHERE `id` = '$id'";
+
+    $query_result = mysqli_query( $con, $query );
+
+    if($query_result){
+        $_SESSION['status'] = "Task Updated Successfully!";
+        $_SESSION['status_code'] = "success";
+        header("Location: index.php");
+        exit();
     }
 }
 
+//For Deleting A Task
 
+if(isset($_POST["delete"])){
+    
+    $id = $_POST['id'];
 
+    $query = "DELETE FROM `tasks` WHERE `id` = '$id'";
+
+    $query_result = mysqli_query( $con, $query );
+
+    if($query_result){
+        $_SESSION['status'] = "Task Deleted Successfully!";
+        $_SESSION['status_code'] = "success";
+        header("Location: index.php");
+        exit();
+        }
+
+}
 ?>

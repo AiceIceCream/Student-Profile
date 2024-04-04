@@ -2,12 +2,14 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "testdb";
+$database = "students";
 
-$conn = mysqli_connect("$host", "$username", "$password", "$database");
+$con = mysqli_connect("$host", "$username", "$password", "$database");
 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+if(!$con)
+{
+    die("". mysqli_connect_error());
 }
+
 
 ?>
