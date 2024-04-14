@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 120vh;
+}
+
+#first{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #48bbe3, #42b3cf, #42aabc, #46a1a9, #4b9797);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .navbar {
+    display: flex;
+}
+
+header .navbar a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-family: tahoma;
+}
+
+header .navbar a:hover {
+    color: gray;
+}
+
+header .icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-family: tahoma;
+}
+
+header #sign {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+header #sign:hover {
+  color: gray;
+}
+
+#welcome-text {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+#welcome-text img {
+    width: 350px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.btn-file{
+    width: 130px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 10px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5cdb95;
+    margin: 30px;
+}
+
+.btn-file span{
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+}
+
+.btn-file:active{
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+.btn-header {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-header:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.btn-header:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+}
+
+#Sign{
+    text-align: right;
+    margin-left: 800px;
+}
+
+.signout{
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.signout:hover {
+    box-shadow: .5px .5px 150px #252525;
+  }
+  
+  .type1::after {
+    content: "Sign out";
+    height: 50px;
+    width: 150px;
+    background-color: #008080;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1::before {
+    content: "<?php echo $_SESSION['user']['firstname'];?>";
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1:hover::after {
+    transform: translateY(0) scale(1.2);
+  }
+  
+  .type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+  }

@@ -132,8 +132,6 @@ include ("config.php");
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">IT3R6 Students List</h5>
-
-              <a href="studentreg.php" style="float: right;" class="btn btn-primary">Add a new Student</a>
               <!-- Table with stripped rows -->
   
   <!-- E line ug tarong ang row parehas sa pag linya sa pag kuha sa data sa database -->
@@ -173,29 +171,6 @@ include ("config.php");
                   <td><?= $row['fullName']; ?></td>
                   <td><?= $row['email']; ?></td>
                   <td><?= $row['course']; ?></td>
-
-                  <td class="text-center">
-                    <div class="container-btns">
-                        <div class="more">
-                            <input type="checkbox" id="more-btn<?= $menuCounter ?>" class="more-btn">
-                            <label for="more-btn<?= $menuCounter ?>" class="more-btn-label">
-                                <span class="more-dot"></span>
-                                <span class="more-dot"></span>
-                                <span class="more-dot"></span>
-                            </label>
-                            <div class="more-menu">
-                                <ul class="more-menu-items" tabindex="-1" role="menu" aria-hidden="true">
-                                    <li class="more-menu-item" role="presentation">
-                                        <button type="button" class="more-menu-btn" role="menuitem">Update</button>
-                                    </li>
-                                    <li class="more-menu-item" role="presentation">
-                                        <button type="button" class="more-menu-btn" role="menuitem">Delete</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </td>
               </tr>
 
                     <div class="expanded-image" id="expandedImage">
