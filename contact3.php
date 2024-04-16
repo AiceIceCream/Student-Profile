@@ -257,9 +257,9 @@ button.contact_form_submit {
 <div id="first">
       <header class="col-lg-12 col-md-6">
             <nav class="navbar" class="col-lg-12 col-md-6">
-            <a href="index.php" class=""><button class="btn-header">Home</button></a>
-            <a href="about.php" class=""><button class="btn-header">About us</button></a>
-            <a href="contact.php" class=""><button class="btn-header">Contact us</button></a>
+            <a href="instructorEnd.php" class=""><button class="btn-header">Home</button></a>
+            <a href="about3.php" class=""><button class="btn-header">About us</button></a>
+            <a href="contact3.php" class=""><button class="btn-header">Contact us</button></a>
             </nav>
         </header>
         

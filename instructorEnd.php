@@ -69,8 +69,8 @@ require 'config.php';
         <header class="col-lg-12 col-md-6">
             <nav class="navbar" class="col-lg-12 col-md-6">
             <a href="instructorEnd.php" class=""><button class="btn-header">Home</button></a>
-            <a href="about.php" onclick=""><button class="btn-header">About Us</button></a>
-            <a href="contact.php" onclick=""><button class="btn-header">Contact Us</button></a>
+            <a href="about3.php" onclick=""><button class="btn-header">About Us</button></a>
+            <a href="contact3.php" onclick=""><button class="btn-header">Contact Us</button></a>
             </nav>
             <a href="index.php"><button class="signout type1"></button></a>
         </header>
@@ -82,7 +82,7 @@ require 'config.php';
 
         <div id="button-container">
             <a href="#"><button class="btn-file"><span>IT3R4<span></button></a>
-            <a href="students.php"><button class="btn-file"><span>IT3R4<span></button></a>
+            <a href="students.php"><button class="btn-file"><span>IT3R6<span></button></a>
         </div>
 
     </div>

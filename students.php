@@ -186,10 +186,10 @@ include ("config.php");
                             <div class="more-menu">
                                 <ul class="more-menu-items" tabindex="-1" role="menu" aria-hidden="true">
                                     <li class="more-menu-item" role="presentation">
-                                        <button type="button" class="more-menu-btn" role="menuitem">Update</button>
+                                        <button type="button" class="more-menu-btn" role="menuitem"><a href="studentupdate.php?id=<?=$row['id'];?>" style="text-decoration: none;">Update</a></button>
                                     </li>
                                     <li class="more-menu-item" role="presentation">
-                                        <button type="button" class="more-menu-btn" role="menuitem">Delete</button>
+                                        <button type="button" class="more-menu-btn" role="menuitem"><a href="studentdelete.php?id=<?=$row['id'];?>" style="text-decoration: none; color: red;">Delete</a></button>
                                     </li>
                                 </ul>
                             </div>

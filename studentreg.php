@@ -72,7 +72,7 @@ if(isset($_POST["insert"])){
 </head>
 <body>
 
-<h1 class="text-center" style="margin-top: 150px">Add Student Registry</h1>
+<h1 class="text-center" style="margin-top: 150px">Add Student</h1>
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-lg-9" >
@@ -111,7 +111,7 @@ if(isset($_POST["insert"])){
                     </div>
 
                     <div class="col-md-12 mb-3 text-center">
-                        <a type="button" style="float: right; margin-left: 10px;" class="btn btn-success" href="index.php">Cancel</a>
+                        <a type="button" style="float: right; margin-left: 10px;" class="btn btn-success" href="students.php">Cancel</a>
                         <button type="submit" class="btn btn-primary" name="insert" style="float: right;">Add Student</button>
                     </div>
                 </div>

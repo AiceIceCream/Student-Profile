@@ -2,38 +2,39 @@
 session_start();    
 include("config.php");
 
-//For Updating A Task
+//For Updating A Student
 
 if(isset($_POST["update"])){
 
     $id = $_POST['id'];
-    $new_title = $_POST['new_title'];
-    $new_description = $_POST['new_description'];
-    $new_priority = $_POST['new_priority'];
-    $new_due = $_POST['new_due'];
+    $new_fullName = $_POST['fullName'];
+    $new_studentId = $_POST['studentId'];
+    $new_course = $_POST['course'];
+    $new_email = $_POST['email'];
+    $image = $_POST['image'];
 
-    if($new_title == ''){
-        $_SESSION['status'] = "Title cannot be empty";
+    if($new_fullName == ''){
+        $_SESSION['status'] = "Name cannot be empty";
         $_SESSION['status_code'] = "error";
-        header("Location: edit_task.php");
+        header("Location: studentupdate.php");
         exit();
     }
 
-    if($new_due == ''){
-        $_SESSION['status'] = "Due date cannot be empty";
+    if($new_studentId == ''){
+        $_SESSION['status'] = "Student ID cannot be empty";
         $_SESSION['status_code'] = "error";
-        header("Location: edit_task.php");
+        header("Location: studentupdate.php");
         exit();
     }
 
-    $query = "UPDATE `tasks` SET `title`='$new_title',`description`='$new_description',`priority`='$new_priority',`due_date`='$new_due' WHERE `id` = '$id'";
+    $query = "UPDATE `records` SET `studentId`='$new_studentId',`fullName`='$new_fullName',`email`='$new_email',`course`='$new_course', `image`='$image' WHERE `id` = '$id'";
 
     $query_result = mysqli_query( $con, $query );
 
     if($query_result){
-        $_SESSION['status'] = "Task Updated Successfully!";
+        $_SESSION['status'] = "Student Record Updated Successfully!";
         $_SESSION['status_code'] = "success";
-        header("Location: index.php");
+        header("Location: students.php");
         exit();
     }
 }
@@ -44,14 +45,14 @@ if(isset($_POST["delete"])){
     
     $id = $_POST['id'];
 
-    $query = "DELETE FROM `tasks` WHERE `id` = '$id'";
+    $query = "DELETE FROM `records` WHERE `id` = '$id'";
 
     $query_result = mysqli_query( $con, $query );
 
     if($query_result){
-        $_SESSION['status'] = "Task Deleted Successfully!";
+        $_SESSION['status'] = "Student Record Deleted Successfully!";
         $_SESSION['status_code'] = "success";
-        header("Location: index.php");
+        header("Location: students.php");
         exit();
         }
 

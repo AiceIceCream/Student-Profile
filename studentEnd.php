@@ -69,8 +69,8 @@ require 'config.php';
         <header class="col-lg-12 col-md-6">
             <nav class="navbar" class="col-lg-12 col-md-6">
             <a href="studentEnd.php" class=""><button class="btn-header">Home</button></a>
-            <a href="about.php" onclick=""><button class="btn-header">About Us</button></a>
-            <a href="contact.php" onclick=""><button class="btn-header">Contact Us</button></a>
+            <a href="about2.php" onclick=""><button class="btn-header">About Us</button></a>
+            <a href="contact2.php" onclick=""><button class="btn-header">Contact Us</button></a>
             </nav>
             <a href="index.php" class="signout type1" onclick="logout()"></a>
         </header>
